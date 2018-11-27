@@ -12,5 +12,5 @@ https://www.kaggle.com/lava18/google-play-store-apps
 Seven tables in all.
 The relation between App and Genre is many to many.
 Here's the data model:
-![alt text](https://github.com/wowwh/SI664_FinalProject/tree/master/static/img/diagram.png "Data Model")
+![Data Model](https://github.com/wowwh/SI664_FinalProject/blob/master/static/img/diagram.png?raw=true "Data Model")
 ## Package Dependencies
