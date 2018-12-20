@@ -138,13 +138,8 @@ class AppSerializer(serializers.ModelSerializer):
 		many=False,
 		write_only=True,
 		queryset=AndroidVersion.objects.all(),
-		source='content_rating'
+		source='android_version'
 	)
-
-	
-
-
-
 
 	app_genre = AppGenreSerializer(
 		source='app_genre_set', # Note use of _set
@@ -249,7 +244,7 @@ class AppSerializer(serializers.ModelSerializer):
 				continue
 			else:
 				AppGenre.objects \
-					.create(app=app,genre=genre)
+					.create(app_id=app_id,genre_id=new_id)
 
 		# Delete old unmatched country entries
 		for old_id in old_ids:
@@ -257,7 +252,7 @@ class AppSerializer(serializers.ModelSerializer):
 				continue
 			else:
 				AppGenre.objects \
-					.filter(app_id=app.app_id, genre_id=old_id) \
+					.filter(app_id=app_id, genre_id=old_id) \
 					.delete()
 
 		return instance
