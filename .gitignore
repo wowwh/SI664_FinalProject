@@ -117,3 +117,7 @@ scripts/google_env/
 
 # mypy
 .mypy_cache/
+
+
+# secret
+scripts/mysite.secrets.py

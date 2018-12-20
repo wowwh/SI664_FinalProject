@@ -43,8 +43,8 @@ class PayTypeSerializer(serializers.ModelSerializer):
 
 
 class AppGenreSerializer(serializers.ModelSerializer):
-	app_id = serializers.ReadOnlyField(source='heritage_site.heritage_site_id')
-	genre_id = serializers.ReadOnlyField(source='country_area.country_area_id')
+	app_id = serializers.ReadOnlyField(source='app.app_id')
+	genre_id = serializers.ReadOnlyField(source='genre.genre_id')
 
 	class Meta:
 		model = AppGenre
